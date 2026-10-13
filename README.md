@@ -1,2 +1,7 @@
 # RayGret
-Last part that i read: 4.2 sending rays into the scene
+Compile command:
+cd /Users/franco/Desktop/RayGret
+mkdir -p build
+g++ index.cpp -o build/inOneWeekend
+build/inOneWeekend > image.ppm
+open image.ppm
