@@ -1,4 +1,6 @@
 #include <iostream>
+#include "utils/color.h"
+#include "utils/vec3.h"
 
 // Task 1: Rendeiring an image
 // Finished: False Mar 13 oct 11:02am
@@ -14,15 +16,8 @@ int main() {
     for (int j = 0; j < image_height; j++) {
         for (int i = 0; i < image_width; i++) {
              clog << "Scanlines remaining: " << (image_height - j) << ' ' << flush;
-            auto r = double(i) / (image_width - 1);
-            auto g = double(j) / (image_height - 1);
-            auto b = 0.25;
-
-            int ir = int(255.999 * r);
-            int ig = int(255.999 * g);
-            int ib = int(255.999 * b);
-
-            cout << ir << " " << ig << " " << ib << "\n"; //output
+             auto pixel_color = color(double(i) / (image_width - 1), double(j) / (image_height - 1), 0.25);
+            write_color(cout, pixel_color);
         }
     }
      clog << "done" << endl;
