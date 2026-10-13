@@ -1,6 +1,7 @@
 #include <iostream>
 #include "utils/color.h"
 #include "utils/vec3.h"
+#include "utils/ray.h"
 
 // Task 1: Rendeiring an image
 // Finished: False Mar 13 oct 11:02am
