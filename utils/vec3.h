@@ -1,9 +1,7 @@
 #ifndef vec3_h
 #define vec3_h
-
 #include <cmath>
 #include <iostream>
-
 using namespace std;
 
 class vec3 {
@@ -102,4 +100,3 @@ inline vec3 unit_vector(vec3 v) {
 }
 
 #endif
-
