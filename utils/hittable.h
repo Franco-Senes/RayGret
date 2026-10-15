@@ -1,6 +1,9 @@
 #ifndef HITTABLE_H
 #define HITTABLE_H
 #include "ray.h"
+#include <memory>
+
+class material;
 
 class hit_record {
     public:
@@ -8,11 +11,12 @@ class hit_record {
     vec3 normal;
     double t;
     bool front_face;
+    std::shared_ptr<material> mat;
 
     void set_face_normal(const ray& r, const vec3& outward_normal) {
         // sets the hit record normal vector to point against the ray direction
         front_face = dot(r.direction(), outward_normal) < 0;
-        normal = front_face ? outward_normal :-outward_normal;
+        normal = front_face ? outward_normal : -outward_normal;
     }
 };
 
