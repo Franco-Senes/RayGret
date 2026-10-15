@@ -10,7 +10,7 @@ class camera {
     double aspect_ratio = 1.0;  // Ratio of image width over height
     int    image_width  = 100;  // Rendered image width in pixel count
     int samples_per_pixel = 10;  // Number of samples per pixel for anti-aliasing
-    int max_depth = 10;  // Maximum number of ray bounces
+    int max_depth = 50;  // Maximum number of ray bounces
     void render(const hittable& world) {
         initialize();
 
@@ -90,12 +90,9 @@ class camera {
             return color(0, 0, 0);
         }
 
-            hit_record rec;
-        if (world.hit(r, interval(0, infinity), rec)) {
-            vec3 direction = random_unit_vector();
-            if (dot(direction, rec.normal) < 0.0) {
-                direction = -direction;
-            }
+        hit_record rec;
+        if (world.hit(r, interval(0.001, infinity), rec)) {
+            vec3 direction = rec.normal + random_unit_vector();
             return 0.5 * ray_color(ray(rec.p, direction), world, depth - 1);
         }
 
