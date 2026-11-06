@@ -1,0 +1,31 @@
+// made with copilot
+// dont count time.
+{
+  // Configuración general; estos valores no se usan actualmente desde index.cpp.
+  "samples_per_pixel": 1,
+  "max_depth": 5,
+  "aspect_ratio": 1.0,
+  "image_width": 100,
+  "cam": {
+    // utils/camera.h: proporción entre el ancho y la altura de la imagen.
+    "aspect_ratio": 1.0,
+    // utils/camera.h: ancho de la imagen en píxeles.
+    "image_width": 1200,
+    // utils/camera.h: muestras de rayos por cada píxel.
+    "samples_per_pixel": 500,
+    // utils/camera.h: cantidad máxima de rebotes de cada rayo.
+    "max_depth": 50,
+    // utils/camera.h: campo de visión vertical de la cámara.
+    "vfov": 20,
+    // index.cpp -> utils/camera.h: posición desde donde mira la cámara.
+    "lookfrom": [13, 2, 3],
+    // index.cpp -> utils/camera.h: punto hacia el que mira la cámara.
+    "lookat": [0, 0, 0],
+    // index.cpp -> utils/camera.h: dirección vertical de la cámara.
+    "vup": [0, 1, 0],
+    // utils/camera.h: ángulo de desenfoque de la lente.
+    "defocus_angle": 0.6,
+    // utils/camera.h: distancia a la que la imagen aparece enfocada.
+    "focus_dist": 10.0
+  }
+}

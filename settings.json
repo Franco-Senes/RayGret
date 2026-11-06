@@ -1,0 +1,18 @@
+{
+  "samples_per_pixel": 1,
+  "max_depth": 5,
+  "aspect_ratio": 1.0,
+  "image_width": 100,
+  "cam": {
+    "aspect_ratio": 1.7777777777777777,
+    "image_width": 400,
+    "samples_per_pixel": 10,
+    "max_depth": 5,
+    "vfov": 20,
+    "lookfrom": [13, 2, 3],
+    "lookat": [0, 0, 0],
+    "vup": [0, 1, 0],
+    "defocus_angle": 0.6,
+    "focus_dist": 10.0
+  }
+}
