@@ -77,8 +77,6 @@ The camera and render quality are configured in `settings.json`:
 Lower values render faster. Higher values produce a cleaner image but take
 longer to render.
 
-
-
 > RayGret is a customized and JSON-configurable version of the final scene
 > from *Ray Tracing in One Weekend*.
 
